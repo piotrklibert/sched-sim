@@ -11,7 +11,9 @@
   [run-simulation (->* ((listof job?)) (number? #:method symbol?) (listof (listof job?)))]))
 
 
-(define (run-simulation initial [limit 10] #:method [meth 'hrrn])
+(define (run-simulation initial 
+                        [limit 10] 
+                        #:method [meth 'hrrn])
   
   (let loop ([n 0] 
              [jobs initial]
@@ -26,6 +28,7 @@
               next-jobs 
               (cons jobs accumulator)))))
 
+
 (define (next-step jobs job)
   (define-values (head tail) (split-at jobs (index-of jobs job)))
   (let* 
@@ -34,4 +37,3 @@
     (append (map job-make-older head)
             job
             (map job-make-older (cdr tail)))))
-

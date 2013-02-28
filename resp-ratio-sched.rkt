@@ -15,8 +15,7 @@
   (let/cc found
     (for 
         ([(prior job) (in-parallel priorities jobs)])
-      (set-box! summed (+ (unbox summed) 
-                          (/ prior denom)))
+      (set-box! summed (+ (unbox summed) (/ prior denom)))
       (when [(unbox summed) . > . number]
         (found job)))
     

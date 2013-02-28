@@ -13,15 +13,18 @@
  make-job-error
  
  (contract-out
-  [struct job ((waiting-time 0+?)
+  [struct job ((waiting-time    0+?)
                (remaining-tasks 0+?))]
   
-  [make-job (->* () (0+? 0+?) job?)]
-  [job-make-older (->* (job?) (real?) job?)]
-  [job-use-task (-> job? job?)]
+  ;; Job creation/functional update
+  [make-job           (->* ()     (0+? 0+?) job?)]
+  [job-make-older     (->* (job?) (real?)   job?)]
+  [job-use-task       (-> job? job?)]
+  
+  ;; Accessors
   [job-remaining-time (-> job? positive?)]
-  [job-priority (-> job? number?)]
-  [job-processing? (-> job? boolean?)]))
+  [job-priority       (-> job? number?)]
+  [job-processing?    (-> job? boolean?)]))
 
 
 (define (make-job-error msg cont-marks)
