@@ -77,4 +77,5 @@
   (parameterize ([plot-new-window? #t])
     (plot-simulation (cons 0 200) (run 201))
     (plot-simulation (cons 0 200) (run 201 #:method 'fifo))
-    (plot-simulation (cons 0 200) (run 201 #:method 'rand))))
+    (plot-simulation (cons 0 200) (run 201 #:method 'rand))
+    (void (read) )))
