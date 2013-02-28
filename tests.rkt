@@ -68,7 +68,10 @@
 (define line-colors 
   (map ->color '(yellow green brown blue red black orange)))
 
+
 ;;================================================================================
+;;
+;; Lets run & render simulations!
 
 (module+ main
   (parameterize ([plot-new-window? #t])
