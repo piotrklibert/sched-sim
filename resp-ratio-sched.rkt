@@ -2,7 +2,7 @@
 
 (require 
  "job.rkt"
- "lst.rkt")
+ "utils/lst.rkt")
 
 (provide
  choose-job)

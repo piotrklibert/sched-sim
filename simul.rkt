@@ -1,7 +1,7 @@
 #lang racket
 
 (require
- "lst.rkt"
+ "utils/lst.rkt"
  "job.rkt"
  "resp-ratio-sched.rkt")
 

@@ -6,7 +6,7 @@
                      #:rest (listof (cons/c string? (listof any/c))) 
                      string?)]))
 
-(require "str.rkt")
+(require "utils/str.rkt")
 
 
 (define th-width (make-parameter 12))

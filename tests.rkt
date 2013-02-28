@@ -2,8 +2,8 @@
 
 (require 
  plot
- [except-in plot/utils sum]
  racket/generator
+ [except-in plot/utils sum]
  "job.rkt"
  "simul.rkt")
 
